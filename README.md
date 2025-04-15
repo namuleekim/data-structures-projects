@@ -1,4 +1,4 @@
-# CS-271 Projects – Data Structures & Algorithms (C++)
+# CS-271 Projects – Data Structures (C++)
 
 This repository contains a series of C++ programming projects completed as part of **CS-271: Data Structures** at Denison University. The course emphasized core data structures, algorithm design, and command-line based problem-solving with increasing complexity.
 
