@@ -14,3 +14,34 @@ To run the program, simply type "make run" in a terminal. You will then be promp
     (x_start, y_start) -> ... -> (x_end, y_end) with a weight of: &lt;Path weight&gt; <br>
 You can then enter more coordinates or click q at anytime to quit.
 
+# CS 271 Final Project – Dijkstra’s Algorithm on Weighted Graphs
+
+Authors: Namu Lee Kim, Andrew McCutchan  
+Date: December 18, 2024  
+Language: C++
+
+## 📌 Overview
+
+This project implements Dijkstra’s shortest path algorithm using a custom weighted graph and priority queue in C++. The application features a CLI interface that allows users to load campus map data and compute shortest paths between nodes on Denison’s campus.
+
+---
+
+## 📂 File Structure
+
+- `weightedGraph.hpp / .cpp` – Weighted graph class with Dijkstra's algorithm implementation  
+- `priorityQueue.hpp / .cpp` – Custom priority queue used for efficient edge selection  
+- `mytests.cpp` – Contains both test cases and the command-line interface logic  
+- `denison.out` – Main dataset: graph representation of Denison campus  
+- `testData.txt` – Smaller sample dataset for testing  
+- `Makefile` – Compiles and runs the program  
+- `customexceptions.hpp` – Custom error handling for graph operations  
+- `README.md` – Instructions and project overview
+
+---
+
+## 💡 Design Decisions
+
+- **Data Simplification**: Street names were excluded to streamline parsing  
+- **Adjacency List Update**: Refactored to use `std::map<int, pair<parent, distance>>` for fast lookup and cleaner logic  
+- **CLI Architecture**: Built using `getline()` for input stability (to avoid `cin` conflicts)  
+- **Single Driver File**: Testing and UI coexist in `mytests.cpp` for easy access and portability

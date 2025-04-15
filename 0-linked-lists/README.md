@@ -1,11 +1,28 @@
-# Project0-cs271 Doubly Linked List
-List of contributors: Namu Lee Kim, Damian Nguyen, Andrew Nguyen\
-This project is an implementation of the data structure Doubly Linked List. It includes a constructor, copy constructor, destructor and in total 11 methods & operators overload. The entirety of the project is in a parent folder named "Group4". Besides this md file, the project consists of 4 different files which are:
-- DoublyLinkedList.h: This is the header file that defines all the methods and function. It also includes the friend fuction for ostream overload.
-- DoublyLinkedList.cpp: This is a C++ file that implements all the methods and function.
-- mytests.cpp: This is a driver that has the test case.
-- makefile: This is a series of Linux commands that compiles DoublyLinkedList.h and DoublyLinkedList.cpp to make a Doublylinkedlist object and compile mytests.cpp to test the correctness of the implementation.
+# CS 271 Project 0 – Doubly Linked List
 
-In the design process, we have decided to write a helper function deepCopy that does a deep copy of a Doublylinkedlist object. This is to save time in functions like copy constructor, concat, etc... We tried to define the friend ostream overload function in the header file and implement it in the .cpp file but it didn't work so we kept the friend function inside the header file. I think this is because since it is not a member of a class but a friend of the class so it cannot be done in similar manner like that of methods. 
+Authors: Namu Lee Kim, Damian Nguyen, Andrew Nguyen  
+Date: September 20, 2024  
+Language: C++
 
+## 📌 Overview
 
+This project implements a custom **Doubly Linked List** data structure in C++. It supports key operations such as insertion, deletion, traversal, deep copy, and operator overloading. The implementation demonstrates object-oriented design in C++ using constructors, destructors, and encapsulated logic.
+
+---
+
+## 📂 File Structure
+
+All files are located in the `Group4/` folder:
+
+- `DoublyLinkedList.h` – Header file declaring the class, its methods, and the `ostream` friend overload  
+- `DoublyLinkedList.cpp` – Source file implementing all methods  
+- `mytests.cpp` – Driver file containing test cases to verify implementation correctness  
+- `Makefile` – Automates compilation of the linked list and test file
+
+---
+
+## 💡 Design Decisions
+
+- Implemented a **`deepCopy` helper function** to simplify logic across the copy constructor, assignment operator, and `concat()`  
+- Defined the `ostream` `<<` overload directly in the header file as a friend function, since placing the implementation in the `.cpp` caused linking issues  
+- Focused on code clarity and modularity to support further extension or integration in later CS 271 projects
